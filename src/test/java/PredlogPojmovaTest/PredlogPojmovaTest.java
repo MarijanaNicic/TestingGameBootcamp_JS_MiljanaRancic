@@ -16,6 +16,7 @@ public class PredlogPojmovaTest extends baseTests {
         var secectedOption = predlog.getSelectedOption();
         predlog.setUnosPojma("Kaliopi");
         Thread.sleep(5000);
+        predlog.clickDugmePotvrdi();
     }
 
 }

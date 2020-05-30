@@ -12,6 +12,7 @@ public class PredlogPojmova {
     private WebDriver driver;
     private By dropdown = By.xpath("/html/body/div/form[2]/select");
     private By unosPojma = By.xpath("/html/body/div/form[2]/input");
+    private By dugmePotvrdi = By.xpath("/html/body/div/form[2]/button");
 
     public PredlogPojmova (WebDriver driver){
         this.driver = driver;
@@ -36,6 +37,12 @@ public class PredlogPojmova {
         WebElement pojmovi = this.getUnosPojma();
         pojmovi.clear();
         pojmovi.sendKeys(pojam);
+    }
+    public WebElement getDugmePotvrdi(){
+        return driver.findElement(dugmePotvrdi);
+    }
+    public void clickDugmePotvrdi(){
+        this.getDugmePotvrdi().click();
     }
 
 }
