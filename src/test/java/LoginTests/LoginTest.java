@@ -9,6 +9,7 @@ public class LoginTest extends baseTests {
 
     @Test
     public void testPostojecegKorisnika() throws InterruptedException {
+        driver.get("https://zgeografija-cefd4.web.app/");
         SoftAssert sa = new SoftAssert();
         LogIn postojeci = new LogIn(driver);
         Thread.sleep(5000);

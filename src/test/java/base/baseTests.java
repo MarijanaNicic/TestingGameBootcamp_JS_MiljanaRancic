@@ -29,7 +29,6 @@ public class baseTests {
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor)driver;
-       goHome();
         js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 5000);");
 
     }

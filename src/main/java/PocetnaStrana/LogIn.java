@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Properties;
 
-public class LogIn {
+public class LogIn{
 
     public Properties locators;
     public WebDriverWait waiter;
@@ -22,20 +22,24 @@ public class LogIn {
 
     }
 
-    public WebElement getUnosImena(){
+    public WebElement getUnosImena() throws InterruptedException {
+        Thread.sleep(5000);
         ((JavascriptExecutor)driver).executeScript("arguments[0].click()",korisnickoIme);
         return driver.findElement(korisnickoIme);
     }
-    public void setUnosImena(String postojeceIme){
+    public void setUnosImena(String postojeceIme) throws InterruptedException {
+        Thread.sleep(5000);
         WebElement korisnik = this.getUnosImena();
         korisnik.clear();
         korisnik.sendKeys(postojeceIme);
     }
 
-    public WebElement getPotvrdi (){
+    public WebElement getPotvrdi () throws InterruptedException {
+        Thread.sleep(5000);
         return driver.findElement(potrdiDugme);
     }
-    public void clickPotvrdi(){
+    public void clickPotvrdi() throws InterruptedException {
+        Thread.sleep(5000);
         this.getPotvrdi().click();
     }
 
